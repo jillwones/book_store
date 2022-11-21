@@ -8,7 +8,21 @@ Skipped this step as table already created.
 
 ## 2. Create Test SQL seeds
 
-Skip this test as SQL seed already made for us - imported into book_store and book_store_test
+```sql
+-- Write your SQL seed here. 
+
+-- First, you'd need to truncate the table - this is so our table is emptied between each test run,
+-- so we can start with a fresh state.
+-- (RESTART IDENTITY resets the primary key)
+
+TRUNCATE TABLE books RESTART IDENTITY; -- replace with your own table name.
+
+-- Below this line there should only be `INSERT` statements.
+-- Replace these statements with your own seed data.
+
+INSERT INTO books (title, author_name) VALUES ('BookTitle1', 'Author1');
+INSERT INTO books (title, author_name) VALUES ('BookTitle2', 'Author2');
+```
 
 ## 3. Define the class names
 
