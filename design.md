@@ -71,8 +71,8 @@ books = repo.all
 books.length # =>  5
 
 books[0].id # =>  1
-books[0].title # =>  'Nineteen Eighty-Four'
-books[0].author_name # =>  'George Orwell'
+books[0].title # =>  'BookTitle1'
+books[0].author_name # =>  'Author1'
 ```
 
 

@@ -1,4 +1,6 @@
-require_relative './book.rb'
+# frozen_string_literal: true
+
+require_relative './book'
 
 class BookRepository
   def all
@@ -8,7 +10,7 @@ class BookRepository
     result_set = DatabaseConnection.exec_params(sql, [])
 
     result_set.each do |record|
-      book = Book.new 
+      book = Book.new
 
       book.id = record['id']
       book.title = record['title']
@@ -16,6 +18,6 @@ class BookRepository
 
       books << book
     end
-    return books
+    books
   end
 end

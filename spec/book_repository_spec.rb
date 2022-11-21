@@ -16,9 +16,9 @@ describe BookRepository do
 
     books = repo.all
 
-    expect(books.length).to eq(2) # =>  2
+    expect(books.length).to eq(2)
 
-    expect(books[0].id).to eq('1') # =>  1
+    expect(books[0].id).to eq('1') 
     expect(books[0].title).to eq('BookTitle1')
     expect(books[0].author_name).to eq('Author1')
   end
